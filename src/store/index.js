@@ -129,7 +129,8 @@ export default new Vuex.Store({
         image:
           "https://lh3.googleusercontent.com/DNyqBNviB5w8-2Irx4Ju-8nJqaz8oWcVABZ11E0ZCkhgMSf-OXBsHVWV7vlctoqGYOa8_LP1-2Kbnt2v_aSNmyjDL6rUPt-76wC0VUI6P_Po4S6kLxTbxhPTar8Fh96hCQ=w166",
         imageHeight: "50",
-        details: `SVG's must be uploaded through <strong>Admin > Portal > System Icons</strong>`,
+        details: `SVG's must be uploaded through <strong>Admin > Portal > System Icons</strong>. Each SVG will need to go through the <a href='/SVGs'>SVG form</a> before being uploaded to the DB. This will add the <strong>.svg_icon</strong> class as well as assign the SVG a new id of 
+        <strong>#svg_[name]</strong>`,
         show: false,
       },
       {
@@ -331,6 +332,37 @@ function removeGateway(item) {
         imageHeight: "150",
         details:
           `Code for the login pages.`,
+        show: false,
+      },
+      {
+        title: "Table",
+        code: `<table class="table table-hover align-middle">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  //Foreach logic in asp.net START
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  //Foreach END
+  </tbody>
+ </table>`,
+        id: 0,
+        image:
+          "https://lh3.googleusercontent.com/IfXRDqKieHPl8OPx5W08LylXj1g03csTzcWCc1mCvUS_XpcwYT0YXnHKFsVEHc_8UrUHfM_zXBKtifgqintnD8DFKxttNn3pZoYNJ71K_zEGxwNKOJVgvnwhTKKpRxVJyQ=w502",
+        imageHeight: "150",
+        details:
+          `Default structure for the tables used in 3.5. This includes a hover background color feature <strong>.table-hover</strong> and aligns the content in each row to the center 
+          <strong>align-middle</strong>.`,
         show: false,
       },
     ],
