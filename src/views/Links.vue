@@ -1,12 +1,15 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6" md="4" lg="3" v-for="item in items" :key="item.i">
-      <v-card class="mx-3">
+      <v-card target="_blank" :href="item.to" class="mx-3 fill-height">
         <v-card-title>{{ item.title }}</v-card-title>
         <v-card-text>
-          <p class="title font-weight-light">{{ item.details }}</p>
-          <p class="title">Examples</p>
+          <p class="title font-weight-light" v-html="item.details"></p>
+        </v-card-text>
+        <v-card-actions class="d-flex flex-wrap">
           <v-chip
+            absolute
+            bottom
             color="primary"
             label
             class="ma-1"
@@ -15,7 +18,7 @@
           >
             {{ chip }}
           </v-chip>
-        </v-card-text>
+        </v-card-actions>
       </v-card>
     </v-col>
   </v-row>
@@ -40,19 +43,19 @@ export default {
         {
           title: "Padding / Margin",
           to: "https://getbootstrap.com/docs/5.1/utilities/spacing/#margin-and-padding",
-          details: "For understanding padding and margin shorthand classes.",
+          details: "For understanding padding and margin shorthand classes built into Bootstrap.",
           examples: [".p-4", ".mx-md-2", ".pt-3"],
         },
         {
           title: "Components",
           to: "https://getbootstrap.com/docs/5.1/components/accordion/",
-          details: "",
+          details: "For all the different components from Bootstrap. Most of the ones we use will be <a href='/'>here</>.",
           examples: ["buttons", "accordion", "<select>"],
         },
         {
           title: "Displaying",
           to: "https://getbootstrap.com/docs/5.1/utilities/display/#hiding-elements",
-          details: "If you need to hide something in a specific media query.",
+          details: "If you need to hide something on a specific screen size or you want to hide something completely.",
           examples: [".d-none", ".d-lg-block"],
         },
       ],
@@ -61,4 +64,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#actions {
+  /* position: absolute;
+  bottom: 20px; */
+}
+</style>
