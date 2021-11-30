@@ -23,6 +23,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "SVGs" */ "../views/SVGs.vue"),
   },
+  {
+    path: "/Links",
+    name: "Links",
+    component: () =>
+      import(/* webpackChunkName: "Links" */ "../views/Links.vue"),
+  },
 ];
 
 const router = new VueRouter({

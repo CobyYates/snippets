@@ -45,6 +45,7 @@ export default {
       { title: "Snippets", icon: "mdi-file-code", to: "/" },
       { title: "Docs", icon: "mdi-xml", to: "Docs" },
       { title: "SVG's", icon: "mdi-image-area", to: "SVGs" },
+      { title: "Links", icon: "mdi-link", to: "Links" },
     ],
   }),
 };
